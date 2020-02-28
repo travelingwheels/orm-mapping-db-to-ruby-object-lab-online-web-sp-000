@@ -49,7 +49,7 @@ class Student
       SELECT grade,
       COUNT(grade < 12)
       FROM students
-      GROUP BY name
+      GROUP BY grade
      SQL
      
       DB[:conn].execute(sql)
