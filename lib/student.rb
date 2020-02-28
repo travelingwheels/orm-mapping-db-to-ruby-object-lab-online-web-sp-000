@@ -79,7 +79,13 @@ class Student
     end.first
   end
   
-  def self
+  def self.all_students_in_grade_X(x)
+    sql = <<-SQL
+       SELECT *
+       FROM students
+       WHERE student.grade = ?
+    SQL
+  end
 
   def save
     sql = <<-SQL
