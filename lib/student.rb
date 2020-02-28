@@ -74,7 +74,7 @@ class Student
        WHERE students.grade = 10 
        LIMIT 1 
     SQL
-    
+    DB[:conn].execute(sql)
   end
 
   def save
